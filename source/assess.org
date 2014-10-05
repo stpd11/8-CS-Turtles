@@ -2,12 +2,12 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 #+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil 
-#+TITLE: Assessment - Soldering License
+#+TITLE: Assessment - Turtle
 #+AUTHOR: Stephen Brown
 
 #+BEGIN_HTML
 <div class=ribbon>
-<a href="https://github.com/stsb11/soldering_license">Fork me on GitHub</a>
+<a href="https://github.com/stsb11/turtle">Fork me on GitHub</a>
 </div>
 #+END_HTML
 
@@ -79,18 +79,14 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-| Task                | Silver                                                            | Gold                                                                          | Platinum                                                                                                               |
-|---------------------+-------------------------------------------------------------------+-------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------|
-| Health & Safety     | Use the machinery safely in the classroom                         |                                                                               |                                                                                                                        |
-|---------------------+-------------------------------------------------------------------+-------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------|
-| Learning the ropes  | Identify the standard electronics equipment used in a Systems lab |                                                                               |                                                                                                                        |
-|---------------------+-------------------------------------------------------------------+-------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------|
-| What's what         | Identify basic electronic components                              | Identify component values, polarity, etc                                      |                                                                                                                        |
-|---------------------+-------------------------------------------------------------------+-------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------|
-| Putting it together |                                                                   | Solder with a good level of accuracy                                          | Solder with a superb degree of accuracy                                                                                |
-|---------------------+-------------------------------------------------------------------+-------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------|
-| Repairs             |                                                                   | Independently perform working track repairs and link wires                    | Perform neat repairs and create flat-laying links with a high degree of precision and an above-average level of skill. |
-|---------------------+-------------------------------------------------------------------+-------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------|
-| Multimeters         | Explain and demonstrate one feature on a multimeter               | Explain and demonstrate how to measure resistance, DC voltage and continuity. | Identify another use for a multimeter unrelated to the soldering license                                               |
-|---------------------+-------------------------------------------------------------------+-------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------|
-
+| <15>            | <20>                 | <20>                 | <20>                 |
+| Challenge       | Silver               | Gold                 | Platinum             |
+|-----------------+----------------------+----------------------+----------------------|
+| Turtle Power    | Use the shell to draw lines | Write a program to draw a shape |                      |
+|-----------------+----------------------+----------------------+----------------------|
+| Loopy           | Use a loop to draw a pentagon | Complete the conditionals task in task 2 |                      |
+|-----------------+----------------------+----------------------+----------------------|
+| Fully Functional | Draw the 4x4 grid of squares in task 3 | Draw the 20 square pattern in task 3 |                      |
+|-----------------+----------------------+----------------------+----------------------|
+| Passing through | Write a function to create n-sided polygons. | Write an original pattern using at least one function. | Create an original pattern using at least two functions, which take parameters. |
+|                 |                      |                      |                      |

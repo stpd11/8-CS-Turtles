@@ -97,7 +97,7 @@ When developer write code, sometimes their programs need to repeat the same chun
 - Turn another 45 degrees
 [[./img/pattern1d.png]]
 - and again...
-[[./img/pattern1e.png]]p
+[[./img/pattern1e.png]]
 
 - And so on. If you think about it, what I'm essentially doing is saying
 #+BEGIN_EXAMPLE
