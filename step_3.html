@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Funky Functions</title>
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Funky Functions</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Func-y Town</a>
+<ul>
+<li><a href="#sec-1-1">Learn it</a></li>
+<li><a href="#sec-1-2">Code It</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class=ribbon>
+<a href="https://github.com/stsb11/turtle">Fork me on GitHub</a>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2 activity">
+<h2 id="sec-1"><span class="section-number-2">1</span> Func-y Town</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+When developer write code, sometimes their programs need to repeat the same chunks of code over and over again. Programming languages help developers with this by allowing the use of <b><b>Functions</b></b>. 
+</p>
+<ul class="org-ul">
+<li>The definition we use is, "A Function is a piece of code which performs a task, and returns a value". 
+</li>
+<li>Let's look at an example.
+</li>
+</ul>
+</div>
+<div id="outline-container-sec-1-1" class="outline-3 learn">
+<h3 id="sec-1-1">Learn it</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>I'd like to draw this pattern&#x2026;
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/pattern1.png" alt="pattern1.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>In order to do this, I need to start by drawing a square&#x2026;
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/pattern1a.png" alt="pattern1a.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Then rotating the turtle 45 degrees
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/pattern1b.png" alt="pattern1b.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>draw another square&#x2026;
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/pattern1c.png" alt="pattern1c.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Turn another 45 degrees
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/pattern1d.png" alt="pattern1d.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>and again&#x2026;
+</li>
+</ul>
+<p>
+<img src="./img/pattern1e.png" alt="pattern1e.png" />p
+</p>
+
+<ul class="org-ul">
+<li>And so on. If you think about it, what I'm essentially doing is saying
+</li>
+</ul>
+<pre class="example">
+Repeat the following 8 times:
+    DRAW A SQUARE
+    ROTATE THE TURTLE 45 degrees
+</pre>
+
+<ul class="org-ul">
+<li>We can teach the computer how to draw squares (or anything else for that matter) by writing a function which contains the steps needed to perform that task.
+</li>
+<li>We're going to start by creating a function called drawsquare().
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2" class="outline-3 code">
+<h3 id="sec-1-2">Code It</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>Start a new Python program, and save it straight away. Call it "<b><b>Pattern.py</b></b>".
+</li>
+<li>Start with the usual code to set Python up for drawing graphics&#x2026;
+</li>
+</ul>
+
+<pre class="example">
+import turtle
+
+def drawsquare(): # This is a function called drawsquare
+    for myMoves in range(4):
+        tess.forward(100)
+        tess.left(360/4)
+        
+wn = turtle.Screen()
+wn.bgcolor("white") 
+wn.title("Func-y Town")
+
+tess = turtle.Turtle()
+tess.color("hotpink")
+        
+for myMoves in range(8):
+    drawsquare()
+    tess.left(45)
+        
+wn.mainloop()
+</pre>
+
+<ul class="org-ul">
+<li>When you run this, it'll draw the pattern for you. 
+</li>
+<li>The def drawsquare(): line and the 3 lines that come after it are where we have declared (created) our function. We've said to Python that any time in the future when we write <b><b>drawsquare()</b></b>, we want a square drawing. 
+</li>
+<li>Change the 8 in the line: <b><b>for myMoves in range(8)</b></b> to something else.
+</li>
+<li>Change the 45 in <b><b>tess.left(45)</b></b> to something else. 
+</li>
+<li>Manipulate the code to draw this shape?
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/pattern2.png" alt="pattern2.png" />
+</p>
+</div>
+
+<ul class="org-ul">
+<li>Create a second function, which draws a triangle when it is called (used).
+</li>
+<li>Add one line of code to your program to produce this shape:
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/pattern2a.png" alt="pattern2a.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Write a program to make the shape below. It is made from 20 squares.
+<ul class="org-ul">
+<li>What angle will you need in between squares? 
+</li>
+<li>A pattern with 4 squares would need 90 degrees between each one.
+</li>
+<li>A pattern with 8 squares would need 45 degrees between each.
+</li>
+<li>A pattern with 180 squares would need 2 degrees between each. 
+</li>
+<li>Is there a relationship between the two numbers?
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/pattern3.png" alt="pattern3.png" />
+</p>
+</div>
+
+<p>
+<a href="./index.html">Back to homepage</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="validation"></p>
+</div>
+</body>
+</html>

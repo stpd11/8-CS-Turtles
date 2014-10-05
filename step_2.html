@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Loopy Patterns</title>
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Loopy Patterns</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Shell Shock</a>
+<ul>
+<li><a href="#sec-1-1">Try it</a></li>
+<li><a href="#sec-1-2">Explain it</a></li>
+<li><a href="#sec-1-3">Learn it</a></li>
+<li><a href="#sec-1-4">Try it</a></li>
+<li><a href="#sec-1-5">Learn it</a></li>
+<li><a href="#sec-1-6">Try it</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class=ribbon>
+<a href="https://github.com/stsb11/turtle">Fork me on GitHub</a>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2 activity">
+<h2 id="sec-1"><span class="section-number-2">1</span> Shell Shock</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+In the last lesson, you typed commands straight into the Python Shell to create patterns. This is enormously repetitive - it'd be much more convenient if we could instead store sets of instructions as a small program, which we can use to draw with.
+</p>
+</div>
+<div id="outline-container-sec-1-1" class="outline-3 build">
+<h3 id="sec-1-1">Try it</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>In the Python Shell window, click "File -&gt; New", and an empty window will appear. 
+</li>
+<li>In here, copy and paste the following text:
+</li>
+</ul>
+
+<pre class="example">
+import turtle
+
+wn = turtle.Screen()     # Set up the window and its attributes
+wn.bgcolor("white")      # Choose our background colour. US spelling.
+wn.title("Turtle Power") # Window title
+
+tess = turtle.Turtle()   # Create tess and set some attributes
+tess.color("green")
+tess.pensize(5)
+
+for myMoves in range(4): # Repeat the indended instructions 4 times.
+    tess.forward(100)
+    tess.left(360/4)     # 360 divided by 4 sides is 90...
+
+wn.mainloop()            # Wait until the window is closed.
+</pre>
+
+<ul class="org-ul">
+<li><b><b>Tip:</b></b> Python is fussy about indentation. The two lines after the "for" command both need to be tabbed into the page. This lets Python know what instructions it is repeating, and which it isn't. 
+</li>
+<li>Click File -&gt; Save As, and save this file on your H: Drive, as "<b><b>shapes.py</b></b>". 
+</li>
+<li><b><b>Tip:</b></b> If you call this "turtle.py", your code won't work!
+</li>
+<li>Run your program by hitting the F5 key on the keyboard, or by choosing Run -&gt; Run Module from the menu at the top of the window. 
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2" class="outline-3 learn">
+<h3 id="sec-1-2">Explain it</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>What shape was drawn? 
+</li>
+<li>We only wrote two movement instructions. Why did the computer draw the full shape?
+</li>
+<li>Can you modify the code to draw a triangle?
+</li>
+<li>Or a pentagon?
+</li>
+<li>What if we changed the "range" number to 360, the forward to 2 and the left to 1?
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1-3" class="outline-3 learn">
+<h3 id="sec-1-3">Learn it</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>We could add a little more code to create a program to show custom graphics, by asking the user what they wanted to see.
+</li>
+<li>Add the following line above your code, so it appears above the "for" line:
+</li>
+</ul>
+
+<pre class="example">
+howbig=int(input("What size lines would you like? "))
+
+for myMoves in range(3):
+        tess.forward(howbig)
+        tess.left(360/3)    # 360 divided by 3 is 120.
+</pre>
+
+<ul class="org-ul">
+<li>Run your program by hitting F5. 
+</li>
+<li>This time, the shell asks the user what size sides they'd like (and stores the answer in a variable called howbig), so we can customise the side of our shape. 
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1-4" class="outline-3 code">
+<h3 id="sec-1-4">Try it</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li>Write code to ask what pen thickness (pensize) the user would like, and set the line to that thickness too.
+</li>
+<li>Change the code to also ask how many sides the shape should have, and to draw the appropriate shape automatically.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1-5" class="outline-3 learn">
+<h3 id="sec-1-5">Learn it</h3>
+<div class="outline-text-3" id="text-1-5">
+<ul class="org-ul">
+<li>It might be a nice bonus if the program could identify what some of the shapes are, by using something called  <b><b>conditionals</b></b>. In Python, we express these using <b><b>IF</b></b> statements.
+</li>
+
+<li>In our current code, add this above your <b><b>for</b></b> line.
+</li>
+</ul>
+
+<pre class="example">
+shape_name="shape with many sides"
+
+if numsides==3:
+    shape_name="triangle"
+if numsides==4:
+    shape_name="square"
+
+print("That's a " + shape_name + ".")
+</pre>
+
+<ul class="org-ul">
+<li>We start by creating a variable which I called shapename. In it, I stored the words "shape with many sides". 
+</li>
+<li>My plan is to write the words "That's a <b><b>XYZ</b></b> ." on the shell screen before I draw the shape. If I haven't entered the name for a 200 sided shape (for example), then at least the user will be told that they've drawn a shape with many sides. 
+</li>
+<li>I then use a series of <b><b>IF</b></b> statements to try and change the value of shapename to the correct name for the shape. 
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1-6" class="outline-3 code">
+<h3 id="sec-1-6">Try it</h3>
+<div class="outline-text-3" id="text-1-6">
+<ul class="org-ul">
+<li>Add all the shape names for up to 10 sides.
+</li>
+</ul>
+
+
+<p>
+<a href="./index.html">Back to homepage</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="validation"></p>
+</div>
+</body>
+</html>
