@@ -125,6 +125,7 @@ In a car, a circuit is needed to ensure that the airbags only deploy when there 
 - (**Note:** Make sure you write Screen with a capital letter!
 
 #+BEGIN_EXAMPLE
+import turtle
 wn=turtle.Screen()
 wn.bgcolor("lightgreen")
 wn.title("Turtle Power")
@@ -173,7 +174,7 @@ tess.clear()
 
 - Draw a red triangle,
 - Draw a pentagon, where each side is a different colour,
-- Create second turtle on the screen, and call it **tom**. Have this draw a black square, and the other turtle draw a green square, so that they look like this...
+- Create **second turtle** on the screen, and call it **tom**. Have this draw a black square, and the other turtle draw a green square, so that they look like this...
 [[./img/squares.png]]
 
 - Next, we'll look at ways of creating shapes more efficiently.
