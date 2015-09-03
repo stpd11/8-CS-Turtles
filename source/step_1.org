@@ -113,6 +113,11 @@ In a car, a circuit is needed to ensure that the airbags only deploy when there 
 - Facebook, NASA, IBM, Google and Yahoo among others all use it extensively. 
 - It is considered by many to be one of the easiest languages to pick up.
 
+
+- One of the big attractions of Python is that many 'libraries' are available to provide it with extra functionality.
+- A library is a set of extra functions that help perform different types of task. There are libraries for advanced maths, graph drawing, graphics, game writing, random numbers and so forth. 
+- We're going to use a fun library called 'Turtle', which allows for the convenient drawing of lines and shapes. 
+
 ** Let's get started
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
@@ -171,12 +176,23 @@ tess.left(90)
 tess.home()
 tess.clear()
 #+END_EXAMPLE
+- Experiment with drawing lines until you're confident, then try the badge task.
 
-- Draw a red triangle,
-- Draw a pentagon, where each side is a different colour,
-- Create **second turtle** on the screen, and call it **tom**. Have this draw a black square, and the other turtle draw a green square, so that they look like this...
+** Badge it
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- *Silver:* Draw a red triangle, (screenshot the result, and upload the image file to BourneToLearn)
+- *Gold:* Draw a pentagon, where each side is a different colour,
+- *Platinum:* Create **second turtle** on the screen, and call it **tom**. Have this draw a black square, and the other turtle draw a green square, so that they look like this...
 [[./img/squares.png]]
 
-- Next, we'll look at ways of creating shapes more efficiently.
 
+Write interpreter commands to draw a grid two squares tall and two squares wide (like the Windows logo). Each square should be a different colour.
+#+BEGIN_EXAMPLE
+tess.home()
+tess.clear()
+#+END_EXAMPLE
+
+- 
 [[./index.html][Back to homepage]]

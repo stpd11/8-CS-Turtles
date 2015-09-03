@@ -79,7 +79,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-- You've looked at loops, functions and working with variables. Now, it's time to combine these skills in new ways to make more advanced graphics!
+- You've lTEST ooked at loops, functions and working with variables. Now, it's time to combine these skills in new ways to make more advanced graphics!
 
 * Continuity
 :PROPERTIES:
