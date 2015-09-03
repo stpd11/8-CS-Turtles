@@ -119,7 +119,7 @@ wn.mainloop()            # Wait until the window is closed.
 - Can you modify the code to draw a triangle?
 - Or a pentagon?
 - What if we changed the "range" number to 360, the forward to 2 and the left to 1?
-
+  
 ** Learn it
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
@@ -154,6 +154,7 @@ for myMoves in range(3):
 - In our current code, add this above your **for** line.
 
 #+BEGIN_EXAMPLE
+numsides=int(input("How many sides would you like your shape to have (3-20)? "))
 shape_name="shape with many sides"
 
 if numsides==3:
@@ -161,7 +162,7 @@ if numsides==3:
 if numsides==4:
     shape_name="square"
 
-print("That's a " + shape_name + ".")
+print("That'll be a " + shape_name + ".")
 #+END_EXAMPLE
 
 - We start by creating a variable which I called shapename. In it, I stored the words "shape with many sides". 
@@ -172,7 +173,23 @@ print("That's a " + shape_name + ".")
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
-- Add all the shape names for up to 10 sides.
+- Add all the shape names for up to 8 sides.
+- In the line, 'for myMoves in range(3):', change the *3* for *numsides*. 
+- In the line, 'tess.left(360/3)', replace the *3* with *numsides*.
+- Run the program. Use 100 sized lines and 4 sides.
+
+** Badge it
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- Modify the program so that...
 
 
+- *Silver:* the user can also choose how thick their lines will be.
+- *Gold:* If the user enters a number below 3 or above 20, they should be told not to be so careless in future before drawing the shape anyway. 
+- *Platinum:* Building on the silver task, also change the code so that each new line drawn is thicker than the last, like this:
+[[./img/w2_gold.png]]
+
+
+- Upload your code to [[https://www.bournetolearn.com][BourneToLearn]].
 [[./index.html][Back to homepage]]

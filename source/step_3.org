@@ -80,7 +80,7 @@
 :HTML_CONTAINER_CLASS: activity
 :END:
 When developer write code, sometimes their programs need to repeat the same chunks of code over and over again. Programming languages help developers with this by allowing the use of **Functions**. 
-- The definition we use is, "A Function is a piece of code which performs a task, and returns a value". 
+- The definition we use is, "A Function is a piece of code which performs a task, and can return a value". 
 - Let's look at an example.
 ** Learn it
 :PROPERTIES:
@@ -143,18 +143,25 @@ wn.mainloop()
 - The def drawsquare(): line and the 3 lines that come after it are where we have declared (created) our function. We've said to Python that any time in the future when we write **drawsquare()**, we want a square drawing. 
 - Change the 8 in the line: **for myMoves in range(8)** to something else.
 - Change the 45 in **tess.left(45)** to something else. 
-- Manipulate the code to draw this shape?
+- Can you manipulate the code to draw this shape?
 [[./img/pattern2.png]]
 
-- Create a second function, which draws a triangle when it is called (used).
-- Add one line of code to your program to produce this shape:
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- *Silver:* Create a second function, which draws a triangle when it is called (used).
+- Add one line of code to your last program to produce this shape:
 [[./img/pattern2a.png]]
-- Write a program to make the shape below. It is made from 20 squares.
-    - What angle will you need in between squares? 
+- *Gold:* Write a program to make the shape below. It is made from 20 squares.
+    - What angle will you need in between squares? Here's a hint to get you started:
     - A pattern with 4 squares would need 90 degrees between each one.
     - A pattern with 8 squares would need 45 degrees between each.
     - A pattern with 180 squares would need 2 degrees between each. 
     - Is there a relationship between the two numbers?
 [[./img/pattern3.png]]
+- *Platinum:* You should now have a function for drawing a square, and one for a triangle. Write another function called squiangle() that when called (used) draws a square, then a triangle by calling those functions.
 
+
+- Upload your code to [[https://www.bournetolearn.com][BourneToLearn.com]] 
 [[./index.html][Back to homepage]]

@@ -79,8 +79,11 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
+** Recap
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
 - We previously created functions, which performed very specific tasks. Developer often try to make their functions as useful as possible by allowing them to take in different values, and give information back to the part of the program that called them. We'll have a look at this now.
-
 ** Parameters 101
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
@@ -91,19 +94,66 @@
 def drawsquare():
     for x in range(4):
         tess.forward(100)
-        tess.left(4)
+        tess.left(90)
 #+END_EXAMPLE
 - What if we wanted to be able to choose the size of our square?
-- In a moment, we'll change the square function to...
+- Make a new Python program, and save it as 'functions2.py'. 
+- Paste this code in:
+
 #+BEGIN_EXAMPLE
+import turtle
+        
 def drawsquare(sideLength):
     for x in range(4):
         tess.forward(sideLength)
-        tess.left(4)
+        tess.left(90)
+
+wn = turtle.Screen()
+wn.bgcolor("white") 
+wn.title("Super Func-y")
+
+tess = turtle.Turtle()
+tess.color("hotpink")
+        
+for myMoves in range(8):
+    drawsquare(50)
+    tess.left(45)
+        
+wn.mainloop()
 #+END_EXAMPLE
-- By adding sideLength to the first line, we told the function that when it runs, the function will be provided with a number, which the function will be able to refer to as sideLength. 
-- Create a new Python program file, and call it "**more-functions.py**".
-- Copy and paste this code...
+
+- By adding sideLength to the first line, we're telling the function that when it runs, it will be provided with a number, which the function will be able to refer to as sideLength.
+- Did you notice that this time, in the line near the bottom of the code that calls the function, we've supplied a number to tell the function how big to draw the square: *drawsquare(50)*
+- In computer science, this is called passing in a *parameter* to the function. When you use print() in Python, you pass in text (a string, as we say). When you use *tess.left(90)*, you're passing in a whole number (an integer) 
+- This is handy, as we can now make squares of any size, and make ever nicer patterns. Change your 'for' loop at the bottom of the program from:
+
+#+BEGIN_EXAMPLE       
+for myMoves in range(8):
+    drawsquare(50)
+    tess.left(45)
+#+END_EXAMPLE
+
+- to...
+
+#+BEGIN_EXAMPLE       
+squareSize=50
+for myMoves in range(8):
+    drawsquare(squareSize)
+    squareSize+=10
+    tess.left(45)
+#+END_EXAMPLE
+
+- Experiment with different ideas. You could...
+    - Make a pattern where there the user chooses the number of steps (I used 8)
+    - Write a function where the number of sides is a parameter
+    - Create a function that takes a colour for the shape to be drawn
+    - Anything else you can dream up!
+
+** More Parameters
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+- Passing in one parameter is useful. It's even better if you pass in several. Copy and paste this code into a new, empty program and save it somewhere:
 #+BEGIN_EXAMPLE
 import turtle
 
@@ -121,24 +171,37 @@ tess = turtle.Turtle()
 
 growingSide=50 # The length of the sides we want to use.
 
-for myMoves in range(10):
-    drawsquare(growingSide,"red")  # Draw the square at its new size.
+for myMove in range(10):
+    if myMove<5:
+         drawsquare(growingSide,"red")  # Draw the square at its new size.
+    else: 
+         drawsquare(growingSide,"blue")  # Let's mix it up.
     tess.left(36)
+
     growingSide=growingSide+10 # Increase the value of growingSide by 10.
 
 wn.mainloop()
 #+END_EXAMPLE
 - You'll notice now that rather than using drawsquare(), we added the size we wanted inside the brackets instead, as well as the colour we'd like the square to be. This can give us the ability to create more intricate patterns, and eventually to start mixing up the colours.
 
-* Code it
+* Colouring in time
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Badge it
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- Try coding some of these:
+- *Silver:* Modify the code so that it starts with a growingSide of 5, and doubles each time a new square is drawn. 
+- *Gold:* If you've not done so before, write a function at the top of your code to draw a triangle, and another to draw a pentagon. Make them take at least one parameter to control the length of the sides. Look carefully at the functions for triangles, squares and pentagon. What's the same? What's different? Write a function called "polygon", into which you can pass a side length and number of sides, which then draws any polygon of any size for you. *Tip:* You might need to look over some of your earlier code to work out how to do the angles!
+- *Platinum:* Add an an ultimatePoly() function (you don't need to delete any other functions you've made. They won't run until they're called by you. It should take side length, number of sides, line colour and line thickness. Use it with a loop to make a complex pattern of your own. 
+
+**  And finally...
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
-- Experiment 1: Double the starting size of the pattern, then put it back.
-- Experiment 2: Double the speed at which each subsequent square grows, then put it back.
-- Experiment 3: If you've not done so before, write a function at the top of your code to draw a triangle, and another to draw a pentagon. Make them use at least one parameter to control the length of the sides. 
-- Exeriment 4: Look carefully at the functions for triangles, squares and pentagon. What's the same? What's different? Write a function called "polygon", into which you can pass a side length and number of sides, which then draws any polygon of any size for you. **Tip:** You might need to look over some of your earlier code to work out how to do the angles!. 
-- Experiment 5: Replace the **for** lines of code at the bottom of your this...
+- Try removing your current 'for' loop, and swapping it with this:
 
 #+BEGIN_EXAMPLE
 for myMoves in ["red","hotpink","blue","green","black","yellow","purple","orange","lightgreen","lightblue"]:
@@ -147,10 +210,13 @@ for myMoves in ["red","hotpink","blue","green","black","yellow","purple","orange
     growingSide=growingSide+10 # Increase the value of growingSide by 10.
 #+END_EXAMPLE
 - Explain to the person next to you how you think the colours keep changing.
-- Experiment 6: Write code to produce the most attractive pattern you can. Perhaps it uses a series of increaseingly sized shapes, different colours, or something like that?
-
+- Experiment 6: Write code to produce the most attractive pattern you can. Perhaps it uses a series of increasingly sized shapes, different colours, or something like that?
 
 * Just for fun...
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+**  And finally...
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
