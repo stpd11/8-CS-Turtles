@@ -2,7 +2,7 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 #+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil 
-#+TITLE: Extra-tricky Coding
+#+TITLE: Being ReaLISTic
 #+AUTHOR: Stephen Brown
 
 #+BEGIN_HTML
@@ -75,34 +75,96 @@
 :HTML_CONTAINER_CLASS: save
 :END:
 
-* The Challenge
+* Lists
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-- You've lTEST ooked at loops, functions and working with variables. Now, it's time to combine these skills in new ways to make more advanced graphics!
-
-* Continuity
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: activity
-:END:
-** About Continuity Testing
+** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- Electronic current can only flow along unbroken wires. Even a break in a track the thickness of a hair will stop a circuit from working - sometimes, human eyes simply can't see if there's a problem. This is when the continuity setting on a  multimeter is helpful; it will only give you a reading if there is a continous connection (hence the name) between the two probes.
-- Every time you pick up a multimeter, the first thing you should do is check if it is working correctly. As they are used all day long by lots of students, people forget to turn them off, the probe wires get damaged, the probes come loose from their sockets and so on. A continuity check from one probe straight to the other will confirm that everything is ok.
-- If you look carefully, you'll see that the insulation on the probes in the picture below has started to break down, and the wires are hanging slightly. These will break soon, hence the importance of testing!
-[[./img/cont.jpg]]
-- **Step 1:** Check that the black (known as common) probe is plugged firmly into the socket labelled COM, and the red probe is plugged into the "V\Omega mA" socket. 
-- **Step 2:** Slowly turn the dial on the front of the meter round until the arrow-head is pointing at the continuity symbol (which looks like an arrow-head with a line next to it on most meters). This is shown in the picture above.
-- **Step 3:** The meter should now show a single number 1 on its display. This is telling you that the two probes aren't currently directly connected together. 
-- **Step 4:** To test the probes are working properly, touch the probes together and wait a moment. The display should change to a tree digit number; most likely 001, 002 or 003. This is telling you that there is a connection between the probes, and that your meter is working.
-- You are now set up to test continuity. Remember that this won't test resistors and other components - it's only for testing wire runs at the moment. 
-** Test it
+- A standard variable is handy for storing a single piece of information.
+#+begin_src python   
+yourName='Jane'
+yourAge=50
+likeCrisps=True
+#+end_src 
+
+- Sometimes, it's handy to store several pieces of information so that we can access them all when we need them. For this, we use a *list*. 
+- Type these commands in the *INTERPRETER* one at a time to get the hang of manipulating lists:
+#+begin_src python   
+someColours=['Red','Blue','Pink','Black']
+
+print(someColours[0])
+someColours.append('Green')
+
+print(someColours)
+
+someColours.sort()
+print(someColours)
+
+someColours.reverse()
+print(someColours)
+
+someColours.pop()
+print(someColours)
+
+someColours.pop(1)
+print(someColours)
+#+end_src 
+** Code It
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: test
+:HTML_CONTAINER_CLASS: code
 :END:
-- You can see how the meter works by touching the probes on the metal part of a steel ruler, the jaws of a set of pliers or any other object made from metal. While it looks daunting, a PCB with no components on it is essentially just strips of metal stuck to pieces of board.
-- Test your multi-core link wire by touching one probe (it doesn't matter which when testing continuity) on the track next to the letter D, and the other on the track near the letter C (or on the solder point there, if thats easier). As long as the reading changes from 1 to something else, your soldering was sucessful. 
-- You now need to test the other link wire, and the two track repairs. 
-- **Extension:** Can you suggest a way that you could check both wire links and both track repairs all at the
+- Using lists, we can get more flexibility over the patterns we can create. 
+#+begin_src python   
+import turtle
+
+wn = turtle.Screen()
+wn.bgcolor("white") 
+wn.title("List Practice")
+
+tess = turtle.Turtle()
+tess.pensize(5)
+
+def colouredSquare(sideLength,newColour):
+    tess.color(newColour)
+    for x in range(4):
+        tess.forward(sideLength)
+        tess.left(90)
+
+colourList=['red','green','blue','orange','hotpink','purple']
+
+for eachColour in colourList:
+    colouredSquare(75,eachColour)  # Draw a square in the current colour.
+
+    # The len() function will tell you how long a list is, or how many characters are in a string.
+    # I'm using it here to calculate the angle I need, based on the size of the list.
+    tess.left(360/len(colourList))
+
+wn.mainloop()
+#+end_src 
+
+* Assessment
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- *Silver:* Modify the code to draw the first square with size 20 sides, the second with size 40, third with 60 and so on. 
+- *Gold:* Change the code so that the can enter five colours that are used to draw a pattern of your choice.
+- *Platinum:* Change the code so that the user can enter as many colours as they like, and have a shape drawn with that many sides. E.g.
+
+#+begin_example
+Name a Python colour (XYZ when done): red
+Name a Python colour (XYZ when done): blue
+Name a Python colour (XYZ when done): green
+Name a Python colour (XYZ when done): XYZ
+Here goes...
+#+end_example
+
+[[./img/w5.png]]
+
+- /Tip:/ You'll need to use a [[https://www.bournetocode.com/projects/7-CS-Turing/pages/6_Lesson.html][WHILE]] loop to make this work. 

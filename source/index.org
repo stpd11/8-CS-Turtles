@@ -32,6 +32,14 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
+* [[file:step_5.html][Lesson 5 - Being ReLISTic]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+* [[file:step_6.html][Lesson 6 - Bringing it together]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
 * [[./assess.html][Achievements - the Badges]]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity

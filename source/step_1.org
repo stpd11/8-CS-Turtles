@@ -189,10 +189,5 @@ tess.clear()
 
 
 Write interpreter commands to draw a grid two squares tall and two squares wide (like the Windows logo). Each square should be a different colour.
-#+BEGIN_EXAMPLE
-tess.home()
-tess.clear()
-#+END_EXAMPLE
 
-- 
 [[./index.html][Back to homepage]]

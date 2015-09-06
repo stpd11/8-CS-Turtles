@@ -1,0 +1,148 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil 
+#+TITLE: Bringing it Together
+#+AUTHOR: Stephen Brown
+
+#+BEGIN_HTML
+<div class=ribbon>
+<a href="https://github.com/stsb11/turtle">Fork me on GitHub</a>
+</div>
+#+END_HTML
+
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+* Turtle Power
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+- You've covered all the basics; you can draw nice patterns, use variables, create functions, use IF and design original code. 
+- Programmers don't all know every single command that the languages they use and libraries (like turtle) contain. 
+- They often need to look things up on the web to find out ways to solve new problems. 
+- For instance, it's possible with Python turtle to have the turtle move without drawing a line, so that we can draw things like this:
+[[./img/w6_1.png]]
+- Go online, and see if you can discover how to get the turtle to move without having it's 'pen' down on the screen. 
+- *Challenge:* See if you can create code to draw the 10-sided shape I made above (with only every other line drawn). 
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+- There are other things you can discover through experimentation...
+#+begin_src python   
+import turtle
+
+wn = turtle.Screen()
+wn.bgcolor("white") 
+wn.title("Mystery Command")
+
+tess = turtle.Turtle()
+tess.penup()
+
+for n in range(1,11):
+    tess.colour('red')
+    tess.stamp()
+    tess.forward(50)  # Draw a square in the current colour.        
+    tess.left(360/10)
+    
+wn.mainloop()
+#+end_src 
+
+- What new ideas are used here? A characteristic of a good developer is being able to apply ideas they've learnt in new situations. Could you use the ideas in the program above to make this pattern (there are 50 turtle stamps here and each is 5 units in front of the one before it), or one like it:
+[[./img/w6_2.png]]
+
+* Assessment
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Try and create as many of these patterns as you can for yourself:
+[[./img/w6_3.png]]
+- A 720 degree spiral.
+
+[[./img/w6_4.png]]
+- 20 spikes that are 50 units long
+
+[[./img/w6_5.png]]
+- A 'tipsy' turtle that moves forward at random between 1-5 units, then turns right a random amount between -45 and 45 degrees. You'll need to research and use the *random* library, and the *randrange* function. 
+
+[[./img/w6_6.png]]
+- A pentagram (the angles will take some thinking about).
+
+[[./img/w6_7.png]]
+- A series of shapes, each with one more side than the last
+- TWO MORE SHAPES TO DO.
+
+
+- *Silver:* Create any three patterns
+- *Gold:* Create any five patterns
+- *Platinum:* Create all the patterns
