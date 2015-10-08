@@ -153,8 +153,8 @@ wn.mainloop()
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- *Silver:* Modify the code to draw the first square with size 20 sides, the second with size 40, third with 60 and so on. 
-- *Gold:* Change the code so that the can enter five colours that are used to draw a pattern of your choice.
+- *Silver:* Modify the code to draw the first square with side lengths of 20, the second with size 40, third with 60 and so on. 
+- *Gold:* Change the code so that the user can enter five colours that are used to draw a pattern of your choice.
 - *Platinum:* Change the code so that the user can enter as many colours as they like, and have a shape drawn with that many sides. E.g.
 
 #+begin_example

@@ -173,9 +173,9 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #268bd2;">yourName</span>=<span style="color: #2aa198;">'Jane'</span>
-<span style="color: #268bd2;">yourAge</span>=50
-<span style="color: #268bd2;">likeCrisps</span>=<span style="color: #268bd2; font-weight: bold;">True</span>
+<pre class="src src-python">yourName='Jane'
+yourAge=50
+likeCrisps=True
 </pre>
 </div>
 
@@ -187,24 +187,24 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #268bd2;">someColours</span>=[<span style="color: #2aa198;">'Red'</span>,<span style="color: #2aa198;">'Blue'</span>,<span style="color: #2aa198;">'Pink'</span>,<span style="color: #2aa198;">'Black'</span>]
+<pre class="src src-python">someColours=['Red','Blue','Pink','Black']
 
-<span style="color: #859900; font-weight: bold;">print</span>(someColours[0])
-someColours.append(<span style="color: #2aa198;">'Green'</span>)
+print(someColours[0])
+someColours.append('Green')
 
-<span style="color: #859900; font-weight: bold;">print</span>(someColours)
+print(someColours)
 
 someColours.sort()
-<span style="color: #859900; font-weight: bold;">print</span>(someColours)
+print(someColours)
 
 someColours.reverse()
-<span style="color: #859900; font-weight: bold;">print</span>(someColours)
+print(someColours)
 
 someColours.pop()
-<span style="color: #859900; font-weight: bold;">print</span>(someColours)
+print(someColours)
 
 someColours.pop(1)
-<span style="color: #859900; font-weight: bold;">print</span>(someColours)
+print(someColours)
 </pre>
 </div>
 </div>
@@ -218,29 +218,29 @@ someColours.pop(1)
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #859900; font-weight: bold;">import</span> turtle
+<pre class="src src-python">import turtle
 
-<span style="color: #268bd2;">wn</span> = turtle.Screen()
-wn.bgcolor(<span style="color: #2aa198;">"white"</span>) 
-wn.title(<span style="color: #2aa198;">"List Practice"</span>)
+wn = turtle.Screen()
+wn.bgcolor("white") 
+wn.title("List Practice")
 
-<span style="color: #268bd2;">tess</span> = turtle.Turtle()
+tess = turtle.Turtle()
 tess.pensize(5)
 
-<span style="color: #859900; font-weight: bold;">def</span> <span style="color: #268bd2;">colouredSquare</span>(sideLength,newColour):
+def colouredSquare(sideLength,newColour):
     tess.color(newColour)
-    <span style="color: #859900; font-weight: bold;">for</span> x <span style="color: #859900; font-weight: bold;">in</span> <span style="color: #657b83; font-weight: bold;">range</span>(4):
-        tess.forward(sideLength)
-        tess.left(90)
+    for x in range(4):
+	tess.forward(sideLength)
+	tess.left(90)
 
-<span style="color: #268bd2;">colourList</span>=[<span style="color: #2aa198;">'red'</span>,<span style="color: #2aa198;">'green'</span>,<span style="color: #2aa198;">'blue'</span>,<span style="color: #2aa198;">'orange'</span>,<span style="color: #2aa198;">'hotpink'</span>,<span style="color: #2aa198;">'purple'</span>]
+colourList=['red','green','blue','orange','hotpink','purple']
 
-<span style="color: #859900; font-weight: bold;">for</span> eachColour <span style="color: #859900; font-weight: bold;">in</span> colourList:
-    colouredSquare(75,eachColour)  <span style="color: #93a1a1;"># </span><span style="color: #93a1a1;">Draw a square in the current colour.</span>
+for eachColour in colourList:
+    colouredSquare(75,eachColour)  # Draw a square in the current colour.
 
-    <span style="color: #93a1a1;"># </span><span style="color: #93a1a1;">The len() function will tell you how long a list is, or how many characters are in a string.</span>
-    <span style="color: #93a1a1;"># </span><span style="color: #93a1a1;">I'm using it here to calculate the angle I need, based on the size of the list.</span>
-    tess.left(360/<span style="color: #657b83; font-weight: bold;">len</span>(colourList))
+    # The len() function will tell you how long a list is, or how many characters are in a string.
+    # I'm using it here to calculate the angle I need, based on the size of the list.
+    tess.left(360/len(colourList))
 
 wn.mainloop()
 </pre>
@@ -257,9 +257,9 @@ wn.mainloop()
 <h3 id="sec-2-1">Badge It</h3>
 <div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
-<li><b>Silver:</b> Modify the code to draw the first square with size 20 sides, the second with size 40, third with 60 and so on. 
+<li><b>Silver:</b> Modify the code to draw the first square with side lengths of 20, the second with size 40, third with 60 and so on. 
 </li>
-<li><b>Gold:</b> Change the code so that the can enter five colours that are used to draw a pattern of your choice.
+<li><b>Gold:</b> Change the code so that the user can enter five colours that are used to draw a pattern of your choice.
 </li>
 <li><b>Platinum:</b> Change the code so that the user can enter as many colours as they like, and have a shape drawn with that many sides. E.g.
 </li>
@@ -284,11 +284,6 @@ Here goes...
 </li>
 </ul>
 </div>
-</div>
-</div>
-</div>
-<div id="postamble" class="status">
-<p class="validation"></p>
 </div>
 </body>
 </html>
