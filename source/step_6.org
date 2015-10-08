@@ -106,7 +106,7 @@ tess = turtle.Turtle()
 tess.penup()
 
 for n in range(1,11):
-    tess.colour('red')
+    tess.color('red')
     tess.stamp()
     tess.forward(50)  # Draw a square in the current colour.        
     tess.left(360/10)
